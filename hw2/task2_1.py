@@ -6,15 +6,14 @@
 # - 0,56 -> 11
 
 num = list(input('Input number: '))
-num.sort()
-x = num.count(',')
-y = num.count('.')
-num.reverse()
-if x > 0 or y > 0:
-    num.pop()
+num.sort()          # сортировка массива по возрастанию
+x = num.count(',')  # находим количство символов точка
+y = num.count('.')  # находим количство символов запятая
+num.reverse()       # разворот массива
+if x > 0 or y > 0:  # если есть точки или запятые, то они находятся в конце списка.
+    num.pop()       # удаление последнего элемента списка
 
 sum=0
-h=0
 i=0
 
 while i < len(num):
